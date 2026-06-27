@@ -6,7 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:5173", "http://127.0.0.1:5173"] }));
+// Allow all origins so Vercel can connect to Render
+app.use(cors());
 app.use(express.json());
 
 // Available models via OpenRouter
