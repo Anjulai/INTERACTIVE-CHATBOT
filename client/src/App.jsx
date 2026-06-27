@@ -3,7 +3,7 @@ import ChatMessage from './components/ChatMessage';
 import Sidebar from './components/Sidebar';
 import './App.css';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 const DEFAULT_MODELS = [
   { id: 'openai/gpt-4o-mini', name: 'GPT-4o Mini', provider: 'OpenAI' },
